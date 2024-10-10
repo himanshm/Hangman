@@ -2,12 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Hangman</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/hangman.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <h1>Hangman</h1>
+    <div id="game-container">
+      <!-- Hangman Display -->
+       <div class="hangman-container">
+        <div class="gallows"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="left-arm"></div>
+        <div class="right-arm"></div>
+        <div class="left-leg"></div>
+        <div class="right-leg"></div>
+       </div>
+
+       <!-- Word Display -->
+        <div class="word-display">
+           <!-- Underscores or letters will be displayed here -->
+        </div>
+
+         <!-- Alphabet Grid Section -->
+        <div class="alphabet-grid">
+          <!-- Alphabet buttons will be dynamically added via JS -->
+        </div>
+
+          <!-- Messages -->
+           <div id="message"></div>
+
+          <!-- Lives Display -->
+           <div id="lives-display">
+            Lives left: <span id="lives-count">6</span>
+           </div>
+
+           <!-- Reset Button -->
+            <button class="reset-btn">Reset Game</button>
+
+    </div>
+    <script type="module" src="/src/scripts/main.ts"></script>
   </body>
 </html>

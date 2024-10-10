@@ -1,0 +1,105 @@
+.hangman-container {
+  position: relative;
+  width: 10rem;
+  height: 15rem;
+  margin: 2rem auto;
+}
+
+/* Gallows */
+.gallows {
+  width: 0.9rem;
+  height: 25rem;
+  background-color: black;
+  position: absolute;
+  left: 5rem;
+  top: 0;
+}
+
+.gallows::before {
+  content: '';
+  width: 10rem;
+  height: 0.4rem; /* Adjusted to keep horizontal bar thin */
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.gallows::after {
+  content: '';
+  width: 1rem;
+  height: 5.1rem;
+  background-color: black;
+  position: absolute;
+  right: -5rem;
+  top: 0;
+}
+
+/* Hangman Body Parts */
+.head, .body, .left-arm, .right-arm, .left-leg, .right-leg {
+  /* Hidden initially */
+  display: none;
+}
+
+/* Head */
+.head {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  position: absolute;
+  left: 8rem;
+  top: 5rem;
+}
+
+/* Body */
+.body {
+  width: 0.5rem;
+  height: 10.2rem;
+  background-color: black;
+  position: absolute;
+  left: 10.2rem;
+  top: 10rem;
+}
+
+/* Arms */
+.left-arm, .right-arm {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: black;
+  position: absolute;
+  top: 12rem;
+  transform-origin: left;
+}
+
+.left-arm {
+  left: 5.4rem;
+  transform-origin: right;
+  transform: rotate(-30deg);
+}
+
+.right-arm {
+  left: 10.4rem;
+  transform-origin: left;
+  transform: rotate(30deg);
+}
+
+/* Legs */
+.left-leg, .right-leg {
+  width: 0.2rem;
+  height: 5rem;
+  background-color: black;
+  position: absolute;
+  top: 20rem;
+  transform-origin: top;
+}
+
+.left-leg {
+  left: 10.2rem;
+  transform: rotate(40deg);
+}
+
+.right-leg {
+  left: 10.5rem;
+  transform: rotate(320deg);
+}

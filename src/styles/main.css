@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.5;
+
+  color: #ebe7ef;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: radial-gradient(
+      circle at top,
+      rgba(241, 210, 70, 0.98),
+      rgba(250, 176, 103, 0.87)
+    );
+  background-repeat: repeat;
+  background-size: 100% 100%, 30% 30%, 100% 100%;
+  min-height: 110rem;
+}
+
+#game-container {
+  text-align: center;
+  width: 100%;
+  max-width: 70rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background: linear-gradient(#383624, #282617);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+
+}
+
+h1 {
+  font-family: 'Caprasimo', cursive;
+  font-size: 3rem;
+  margin: 0 auto 3rem auto;
+  color: #3f3b00;
+  text-align: center;
+}
+
+.word-display {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Alphabet grid */
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  margin: 2rem 0;
+  justify-items: center;
+}
+
+.alphabet-grid button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.alphabet-grid button:hover {
+  background-color: #ddd;
+}
+
+.alphabet-grid button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+#lives-display {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.reset-btn {
+  padding: 1rem 2rem;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #ff3333;
+}
+
